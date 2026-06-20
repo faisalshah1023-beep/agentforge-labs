@@ -1,19 +1,20 @@
 const pricingPlans = [
   {
     name: "Starter",
-    price: "Starting at $[X]",
+    price: "$150–$300",
     description: "Landing pages, simple automations, single-workflow builds",
     features: ["Focused scope", "One core workflow or page", "Testing and handoff"],
   },
   {
     name: "Growth",
-    price: "Starting at $[X]",
+    price: "$400–$900",
     description: "Multi-step automations, WhatsApp/booking systems, AI agents with memory",
     features: ["Multi-step workflow", "AI agent with memory", "Business tool integration"],
   },
   {
     name: "Custom/Agency",
     price: "Custom quote",
+    priceNote: "Typically $1,000+ depending on scope",
     description: "Multi-agent systems, RAG pipelines, full MVP builds, white-label agency work",
     features: ["Custom architecture", "MCP/RAG integrations", "White-label delivery option"],
   },
@@ -64,6 +65,11 @@ export default function Pricing() {
                   {plan.price}
                 </span>
               </div>
+              {plan.priceNote ? (
+                <p className={index === 1 ? "mt-2 text-sm text-stone-300" : "mt-2 text-sm text-stone-600"}>
+                  {plan.priceNote}
+                </p>
+              ) : null}
 
               <ul className="mt-8 flex-1 space-y-3">
                 {plan.features.map((feature) => (

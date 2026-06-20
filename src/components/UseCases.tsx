@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const useCases = [
   {
     title: "Team of AI Agents",
@@ -61,6 +63,38 @@ const useCases = [
   },
   {
     title: "Human in the Loop Agent",
+    proofSteps: [
+      {
+        label: "Step 1",
+        title: "n8n approval workflow",
+        description: "Airtable data triggers the Sales Agent, human feedback loop, revision agent, and Gmail send path.",
+        image: "/workflows/human-in-the-loop-agent.png",
+      },
+      {
+        label: "Step 2",
+        title: "Sales request form data",
+        description: "Real project fields such as name, email, company, intent, budget, description, and timeline feed the AI draft.",
+        image: "/workflows/human-in-the-loop-form.png",
+      },
+      {
+        label: "Step 3",
+        title: "Human approval email",
+        description: "The team receives an approval-required email with lead context and the AI-generated outreach draft before anything is sent.",
+        image: "/workflows/human-in-the-loop-email-approval.png",
+      },
+      {
+        label: "Step 4",
+        title: "Successful n8n execution",
+        description: "The execution view shows the approval path completed successfully, including the final Gmail send branch.",
+        image: "/workflows/human-in-the-loop-execution-success.png",
+      },
+      {
+        label: "Step 5",
+        title: "Approved client email sent",
+        description: "After human approval, the final personalized outreach email is delivered to the client through Gmail.",
+        image: "/workflows/human-in-the-loop-client-email.png",
+      },
+    ],
     subtitle: "AI-assisted sales email drafting with human approval before sending.",
     problem:
       "Sales teams spend too much time writing personalized outreach emails from scratch, but fully automated AI sending can be risky. Without human review, AI-generated emails may include incorrect details, weak positioning, off-brand tone, or unapproved claims before reaching a client.",
@@ -147,6 +181,47 @@ function DetailList({ title, items }: { title: string; items: string[] }) {
   );
 }
 
+function WorkflowScreenshot({
+  src,
+  title,
+  label,
+  description,
+}: {
+  src: string;
+  title: string;
+  label: string;
+  description: string;
+}) {
+  return (
+    <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#17151f] p-2 shadow-2xl shadow-black/30">
+      <div className="flex items-center justify-between border-b border-amber-100/10 px-3 py-2">
+        <div className="flex gap-1.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        </div>
+        <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-amber-200">
+          {label}
+        </span>
+      </div>
+      <div className="px-3 py-3">
+        <h4 className="text-sm font-semibold text-white">{title}</h4>
+        <p className="mt-1 text-xs leading-relaxed text-stone-400">
+          {description}
+        </p>
+      </div>
+      <Image
+        src={src}
+        alt={`${title} screenshot`}
+        width={1920}
+        height={849}
+        className="h-auto w-full rounded-xl object-cover"
+        sizes="(min-width: 1024px) 42vw, 100vw"
+      />
+    </div>
+  );
+}
+
 export default function UseCases() {
   return (
     <section id="use-cases" className="bg-[#17151f] py-20 md:py-28">
@@ -181,6 +256,20 @@ export default function UseCases() {
                   <p className="mt-3 text-base font-semibold text-amber-100">
                     {useCase.subtitle}
                   </p>
+
+                  {useCase.proofSteps ? (
+                    <div>
+                      {useCase.proofSteps.map((step) => (
+                        <WorkflowScreenshot
+                          key={step.image}
+                          src={step.image}
+                          title={step.title}
+                          label={step.label}
+                          description={step.description}
+                        />
+                      ))}
+                    </div>
+                  ) : null}
 
                   <div className="mt-8 space-y-5">
                     <div>

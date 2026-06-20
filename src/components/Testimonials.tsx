@@ -10,54 +10,41 @@ const projects = [
 ];
 
 function WorkflowPreview({
-  category,
   title,
   tags,
 }: {
-  category: string;
   title: string;
   tags: string[];
 }) {
   const nodes = ["Trigger", "AI Agent", tags[0] ?? "Tool", tags[1] ?? "Action"];
 
   return (
-    <div className="relative mb-6 overflow-hidden rounded-2xl border border-[#342d46] bg-[#17151f] p-4 shadow-inner shadow-black/30">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,158,11,0.18),transparent_30%),radial-gradient(circle_at_85%_25%,rgba(109,93,252,0.22),transparent_34%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.05)_1px,transparent_1px)] bg-[size:18px_18px]" />
-
-      <div className="relative z-10 flex items-center justify-between gap-3">
+    <div className="mb-6 overflow-hidden rounded-2xl border border-[#342d46] bg-[#17151f] p-4 shadow-inner shadow-black/30">
+      <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-amber-200">
-            Workflow Preview
+            System Flow
           </p>
           <p className="mt-1 line-clamp-1 text-sm font-semibold text-white">
             {title}
           </p>
         </div>
-        <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-amber-200">
-          {category}
-        </span>
       </div>
 
-      <div className="relative z-10 mt-5 grid grid-cols-2 gap-3">
+      <div className="mt-5 grid grid-cols-2 gap-2.5">
         {nodes.map((node, index) => (
-          <div key={`${node}-${index}`} className="relative rounded-xl border border-white/10 bg-white/[0.07] p-3">
-            <div className="mb-3 flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-amber-300 to-orange-400 text-xs font-black text-[#17151f]">
-                {index + 1}
-              </span>
-              <span className="line-clamp-1 text-xs font-semibold text-stone-100">
-                {node}
-              </span>
-            </div>
-            <div className="h-1.5 rounded-full bg-[#342d46]">
-              <div className="h-1.5 rounded-full bg-gradient-to-r from-amber-300 to-violet-400" style={{ width: `${55 + index * 12}%` }} />
-            </div>
+          <div key={`${node}-${index}`} className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-2.5">
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-300 text-xs font-black text-[#17151f]">
+              {index + 1}
+            </span>
+            <span className="line-clamp-1 text-xs font-semibold text-stone-100">
+              {node}
+            </span>
           </div>
         ))}
       </div>
 
-      <div className="relative z-10 mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2">
         {tags.slice(0, 3).map((tag) => (
           <span key={tag} className="rounded-full border border-amber-300/10 bg-amber-300/[0.06] px-2.5 py-1 text-[0.65rem] font-medium text-amber-100">
             {tag}
@@ -102,7 +89,7 @@ export default function Testimonials() {
             Recent Automation Systems
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#17151f] md:text-5xl">
-            Case-study style systems built around clear business outcomes
+            Real automation systems built around clear business outcomes
           </h2>
         </div>
 
@@ -115,15 +102,8 @@ export default function Testimonials() {
               {project.image ? (
                 <ScreenshotPreview src={project.image} title={project.title} />
               ) : (
-                <WorkflowPreview
-                  category="Case Study"
-                  title={project.title}
-                  tags={project.tags}
-                />
+                <WorkflowPreview title={project.title} tags={project.tags} />
               )}
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-stone-500">
-                Case Study
-              </p>
               <h3 className="text-xl font-semibold text-[#17151f]">{project.title}</h3>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-stone-700">
                 <p><span className="font-semibold text-[#17151f]">Problem:</span> {project.problem}</p>

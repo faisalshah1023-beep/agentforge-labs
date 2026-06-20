@@ -1,10 +1,16 @@
 const services = [
-  ["AI", "AI Agents", "Custom agents for sales, support, operations and lead qualification."],
-  ["RAG", "RAG Knowledge Systems", "Private AI assistants trained on company data and documents."],
-  ["WA", "WhatsApp Automation", "Lead capture, appointment booking and follow-up automation."],
-  ["n8n", "Workflow Automation", "n8n and custom workflows that eliminate repetitive tasks."],
-  ["MCP", "MCP Integrations", "Connect Claude, Cursor and AI systems to real business tools."],
-  ["DEV", "Custom Internal Tools", "Dashboards, portals and business applications."],
+  ["AI Agents", "Custom agents for sales, support, operations and lead qualification."],
+  ["RAG Knowledge Systems", "Private AI assistants trained on company data and documents."],
+  ["WhatsApp Automation", "Lead capture, appointment booking and follow-up automation."],
+  ["Workflow Automation", "n8n and custom workflows that eliminate repetitive tasks."],
+  ["MCP Integrations", "Connect Claude, Cursor and AI systems to real business tools."],
+  ["Custom Internal Tools", "Dashboards, portals and business applications."],
+];
+
+const voiceAgentServices = [
+  ["Outbound Call Agents", "Automated outbound calls for appointment reminders, lead follow-up, and review requests."],
+  ["Inbound Call Receptionists", "AI phone receptionists that answer calls, qualify leads, and book appointments in real time."],
+  ["Voice + Calendar + CRM Integration", "Voice agents connected to calendar systems and CRMs so calls result in real booked appointments, not just transcripts."],
 ];
 
 export default function Features() {
@@ -25,22 +31,58 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map(([icon, title, description]) => (
+        <div className="mt-14 grid gap-x-10 gap-y-0 rounded-3xl border border-[#eadfcb] bg-[#fffaf0] p-6 shadow-sm shadow-stone-900/5 md:grid-cols-2 md:p-8">
+          {services.map(([title, description]) => (
             <div
               key={title}
-              className="group relative overflow-hidden rounded-3xl border border-[#eadfcb] bg-[#fffaf0] p-6 shadow-sm shadow-stone-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-2xl hover:shadow-amber-900/10"
+              className="border-b border-[#eadfcb] py-6 last:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-orange-400 text-sm font-bold text-white shadow-lg shadow-amber-900/20">
-                {icon}
-              </div>
               <h3 className="text-lg font-semibold text-[#17151f]">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-stone-700">
                 {description}
               </p>
-              <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-amber-400/10 transition-transform duration-300 group-hover:scale-150" />
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 rounded-3xl border border-[#eadfcb] bg-[#fffaf0] p-6 shadow-sm shadow-stone-900/5 md:p-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-violet-700">
+              Voice AI Agents
+            </p>
+            <h3 className="mt-3 text-2xl font-bold tracking-tight text-[#17151f] md:text-4xl">
+              Voice AI Agents
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-stone-700 md:text-lg">
+              AI agents that can make and receive real phone calls — for appointment reminders, lead follow-up, intake calls, and customer support.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-x-10 md:grid-cols-3">
+            {voiceAgentServices.map(([title, description]) => (
+              <div key={title} className="border-t border-[#eadfcb] py-6">
+                <h4 className="text-lg font-semibold text-[#17151f]">{title}</h4>
+                <p className="mt-3 text-sm leading-relaxed text-stone-700">
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              "VAPI",
+              "Retell AI",
+              "ElevenLabs",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-[#eadfcb] bg-[#f7f2e8] px-3 py-1 text-xs font-medium text-stone-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
