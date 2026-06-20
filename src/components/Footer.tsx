@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2.5">
+            <a href="#home" className="flex items-center gap-2.5">
               <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-violet-500 text-sm font-bold text-white">
                 AF
               </span>
@@ -67,7 +67,7 @@ export default function Footer() {
             reserved.
           </p>
           <p className="text-sm text-stone-500">
-            Full-Stack Development · Vibe Coding · AI Agents · Automation
+            Full-Stack Development · AI Agents · Automation
           </p>
         </div>
       </div>

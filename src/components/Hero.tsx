@@ -1,14 +1,4 @@
-const trustBadges = [
-  "Full-Stack Development",
-  "Vibe Coding",
-  "AI Automation",
-  "100+ Workflows Built",
-  "n8n",
-  "Next.js",
-  "MCP Servers",
-  "RAG Agents",
-  "GoHighLevel",
-];
+const trustBadge = "AI Agents • RAG Systems • MCP Integrations • Workflow Automation";
 
 const workflowRows = [
   ["Clinics", "AI receptionist", "Bookings"],
@@ -26,7 +16,7 @@ const clientTypes = [
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#17151f] pt-28 pb-20 text-white md:pt-36 md:pb-28">
+    <section id="home" className="relative isolate overflow-hidden bg-[#17151f] pt-28 pb-20 text-white md:pt-36 md:pb-28">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(245,158,11,0.22),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(109,93,252,0.28),transparent_32%),linear-gradient(135deg,#17151f_0%,#241f35_48%,#34241b_100%)]" />
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-amber-300/70 to-transparent" />
       <div className="pointer-events-none absolute left-1/2 top-24 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
@@ -36,19 +26,17 @@ export default function Hero() {
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-50/8 px-4 py-1.5 text-sm font-medium text-amber-100 shadow-lg shadow-black/20 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-amber-300 shadow-[0_0_18px_rgba(252,211,77,0.9)]" />
-              AI automation engineer, full-stack developer, and vibe coder
+              {trustBadge}
             </div>
 
             <h1 className="max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-              Automation systems for service businesses that want more clients and less admin
+              AI Agents & Automation Systems That Generate Leads, Book Appointments, and Eliminate Repetitive Work
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300 md:text-xl">
-              AgentForge Labs builds websites, dashboards, AI agents, and
-              workflow automations for clinics, real estate teams, gyms, local
-              service businesses, and small tech founders. Built by Shah Faisal,
-              a full-stack developer and vibe coder with 100+ automation
-              workflows shipped.
+              We build AI agents, RAG systems, WhatsApp automations, and custom
+              workflows that save time, reduce admin work, and help service
+              businesses grow faster.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -56,22 +44,23 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-amber-300 to-orange-400 px-7 py-3.5 text-base font-semibold text-[#17151f] shadow-xl shadow-amber-900/25 transition-all hover:shadow-amber-700/40 hover:brightness-105"
               >
-                Book a Build Call
+                Book Free Strategy Call
               </a>
               <a
                 href="#projects"
                 className="inline-flex items-center justify-center rounded-full border border-amber-100/15 bg-white/5 px-7 py-3.5 text-base font-semibold text-white backdrop-blur transition-colors hover:border-amber-300/40 hover:bg-white/10"
               >
-                See Client Systems
+                View Case Studies
               </a>
             </div>
 
+            <p className="mt-4 text-sm font-medium text-stone-400">
+              Currently onboarding first clients — early access pricing available for a limited time.
+            </p>
+
             <div className="mt-10 flex flex-wrap gap-3">
-              {trustBadges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-full border border-amber-100/10 bg-amber-50/[0.06] px-4 py-2 text-sm font-medium text-stone-200"
-                >
+              {["AI Agents", "RAG Systems", "WhatsApp", "n8n", "MCP", "Full-Stack"].map((badge) => (
+                <span key={badge} className="rounded-full border border-amber-100/10 bg-amber-50/[0.06] px-4 py-2 text-sm font-medium text-stone-200 transition-transform duration-300 hover:-translate-y-0.5 hover:border-amber-300/30">
                   {badge}
                 </span>
               ))}

@@ -1,12 +1,10 @@
 const services = [
-  ["WEB", "Websites and Client Portals", "Fast, modern landing pages, service websites, booking flows, dashboards, and MVP interfaces built with full-stack development and vibe-coding speed."],
-  ["CLN", "Clinic and Healthcare Automation", "AI receptionists, appointment reminders, patient intake, missed-call follow-up, FAQ agents, Gmail updates, and human handoff workflows."],
-  ["RE", "Real Estate Lead Systems", "Property lead capture, WhatsApp follow-up, deal analysis, investor reports, Google Sheets pipelines, and CRM updates for agents and investors."],
-  ["GYM", "Gym and Local Business Growth", "Membership lead qualification, class reminders, WhatsApp replies, review requests, trial booking, and automated follow-up systems."],
-  ["AI", "Custom AI Agents", "Supervisor, planner, sales, support, research, email, calendar, and receptionist agents with memory, tools, RAG, and MCP access."],
-  ["n8n", "n8n Workflow Automation", "100+ workflows built with webhooks, schedules, API requests, Google Sheets, Gmail, Airtable, Slack, Drive, and custom JavaScript logic."],
-  ["GHL", "GoHighLevel and CRM Automation", "GHL WhatsApp/SMS agents, intro flows, follow-up systems, sales/support routing, pipeline updates, and knowledge-base workflows."],
-  ["MVP", "Tech Founder MVP Builds", "Small SaaS tools, internal apps, automations, AI dashboards, workflow prototypes, and productized services for founders and small tech owners."],
+  ["AI", "AI Agents", "Custom agents for sales, support, operations and lead qualification."],
+  ["RAG", "RAG Knowledge Systems", "Private AI assistants trained on company data and documents."],
+  ["WA", "WhatsApp Automation", "Lead capture, appointment booking and follow-up automation."],
+  ["n8n", "Workflow Automation", "n8n and custom workflows that eliminate repetitive tasks."],
+  ["MCP", "MCP Integrations", "Connect Claude, Cursor and AI systems to real business tools."],
+  ["DEV", "Custom Internal Tools", "Dashboards, portals and business applications."],
 ];
 
 export default function Features() {
@@ -18,17 +16,16 @@ export default function Features() {
             Services
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#17151f] md:text-5xl">
-            Real systems for businesses that sell services, book appointments, and manage leads
+            Premium automation services for growing service businesses
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-stone-700">
-            AgentForge Labs is not a generic template site. It is a
-            full-stack build studio for websites, MVPs, client portals, AI agents,
-            and automations that help small businesses respond faster and close
-            more leads.
+            We design, build, and integrate AI systems that connect to the tools
+            your business already uses, then turn repetitive work into reliable
+            workflows.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map(([icon, title, description]) => (
             <div
               key={title}

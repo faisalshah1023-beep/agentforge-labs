@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 const navLinks = [
+  { href: "#home", label: "Home" },
   { href: "#projects", label: "Projects" },
   { href: "#services", label: "Services" },
   { href: "#solutions", label: "Use Cases" },
@@ -18,7 +19,7 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#2a2438]/10 bg-[#17151f]/88 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2.5">
+        <a href="#home" className="flex items-center gap-2.5">
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-violet-500 text-sm font-bold text-white shadow-lg shadow-amber-900/25">
             AF
           </span>

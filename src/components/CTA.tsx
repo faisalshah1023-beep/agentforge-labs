@@ -11,8 +11,8 @@ export default function CTA() {
               Need a website, app, or automation system that feels custom?
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-stone-300">
-              AgentForge Labs is run by Shah Faisal, a full-stack developer, vibe
-              coder, and automation builder. Send your business problem, app idea,
+              AgentForge Labs is run by Shah Faisal, a full-stack developer and
+              automation builder. Send your business problem, app idea,
               workflow screenshots, API docs, or tool list and I will turn it into
               a real working system.
             </p>

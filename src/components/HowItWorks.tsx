@@ -1,8 +1,8 @@
 const steps = [
-  ["01", "Understand the business goal", "I map the offer, niche, lead source, client journey, tools, and outcome before deciding what to build."],
-  ["02", "Design the system", "I choose the right build: landing page, full-stack app, dashboard, CRM flow, WhatsApp bot, RAG assistant, MCP agent, or automation stack."],
-  ["03", "Build the product and automation", "I connect the frontend, backend, APIs, webhooks, Gmail, Sheets, Drive, Pinecone, Supabase, GoHighLevel, WhatsApp, VAPI, Airtable, and custom code."],
-  ["04", "Launch and hand over", "I test with real inputs, fix failed runs, document the flow, and deliver a system the client can understand and use."],
+  ["01", "Discovery Call", "We identify the business goal, bottleneck, current tools, and the automation opportunity with the fastest path to ROI."],
+  ["02", "Automation Blueprint", "We map the triggers, data sources, AI logic, integrations, approval points, and success metrics before building."],
+  ["03", "Build & Integration", "We connect the AI agents, RAG systems, WhatsApp flows, n8n workflows, APIs, databases, and business tools."],
+  ["04", "Launch & Optimization", "We test the system with real inputs, launch safely, monitor performance, and improve the workflow after real usage."],
 ];
 
 export default function HowItWorks() {
@@ -15,7 +15,7 @@ export default function HowItWorks() {
             How It Works
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
-            How a client idea becomes a working business system
+            From idea to live automation in four clear steps
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-stone-300">
             The same process works for websites, MVPs, dashboards, booking

@@ -1,46 +1,45 @@
-const proofPoints = [
+const pricingPlans = [
   {
-    name: "Build Experience",
-    value: "100+",
-    description: "100+ workflow and automation systems built across service business, agency, and tech-founder use cases.",
-    items: ["Full-stack websites", "AI agents and workflows", "Client-style business systems", "Reusable automation packages"],
+    name: "Starter",
+    price: "Starting at $[X]",
+    description: "Landing pages, simple automations, single-workflow builds",
+    features: ["Focused scope", "One core workflow or page", "Testing and handoff"],
   },
   {
-    name: "Real Workflow Activity",
-    value: "98",
-    description: "Production executions shown inside the n8n overview, with real workflow activity, debugging, and optimization experience.",
-    items: ["Execution monitoring", "Failed-run handling", "API troubleshooting", "Client handoff thinking"],
+    name: "Growth",
+    price: "Starting at $[X]",
+    description: "Multi-step automations, WhatsApp/booking systems, AI agents with memory",
+    features: ["Multi-step workflow", "AI agent with memory", "Business tool integration"],
   },
   {
-    name: "Practical Delivery",
-    value: "5.45s",
-    description: "Systems are built around clear outcomes: faster response, cleaner operations, better lead follow-up, and easier client management.",
-    items: ["Fast response flows", "Webhook-first systems", "Structured outputs", "Business-friendly documentation"],
+    name: "Custom/Agency",
+    price: "Custom quote",
+    description: "Multi-agent systems, RAG pipelines, full MVP builds, white-label agency work",
+    features: ["Custom architecture", "MCP/RAG integrations", "White-label delivery option"],
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="proof" className="bg-[#fffaf0] py-20 md:py-28">
+    <section id="pricing" className="bg-[#fffaf0] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-violet-700">
-            Proof
+             Pricing
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#17151f] md:text-5xl">
-            Proof that this is more than a template website
+             How Builds Are Priced
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-stone-700">
-            The systems shown here are based on real workflows, real integrations,
-            and business problems clients understand: missed leads, slow replies,
-            manual admin, messy inboxes, and disconnected tools.
+            Every business is different, but these starting points help you choose
+            the right level of build before requesting a custom proposal.
           </p>
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {proofPoints.map((point, index) => (
+          {pricingPlans.map((plan, index) => (
             <div
-              key={point.name}
+              key={plan.name}
               className={`relative flex flex-col rounded-3xl p-7 ${
                 index === 1
                   ? "border-2 border-amber-400 bg-[#17151f] text-white shadow-2xl shadow-amber-900/20"
@@ -49,25 +48,25 @@ export default function Pricing() {
             >
               {index === 1 && (
                 <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-amber-300 to-orange-400 px-4 py-1 text-xs font-semibold text-[#17151f]">
-                  Dashboard Metric
+                  Popular
                 </span>
               )}
 
               <h3 className={index === 1 ? "text-xl font-semibold text-white" : "text-xl font-semibold text-[#17151f]"}>
-                {point.name}
+                {plan.name}
               </h3>
               <p className={index === 1 ? "mt-2 text-sm leading-relaxed text-stone-300" : "mt-2 text-sm leading-relaxed text-stone-700"}>
-                {point.description}
+                {plan.description}
               </p>
 
               <div className="mt-7 flex items-end gap-2">
                 <span className={index === 1 ? "text-5xl font-bold text-white" : "text-5xl font-bold text-[#17151f]"}>
-                  {point.value}
+                  {plan.price}
                 </span>
               </div>
 
               <ul className="mt-8 flex-1 space-y-3">
-                {point.items.map((feature) => (
+                {plan.features.map((feature) => (
                   <li
                     key={feature}
                     className={index === 1 ? "flex items-start gap-2.5 text-sm text-stone-200" : "flex items-start gap-2.5 text-sm text-stone-700"}
@@ -86,7 +85,7 @@ export default function Pricing() {
                     : "border border-[#d9cbb5] text-[#17151f] hover:border-amber-400 hover:text-violet-700"
                 }`}
               >
-                Discuss a Project
+                Get Custom Proposal
               </a>
             </div>
           ))}

@@ -1,6 +1,6 @@
 # AgentForge Labs
 
-AgentForge Labs is Shah Faisal's full-stack development, vibe coding, and automation agency website. It presents real systems for clinics, real estate teams, gyms, agencies, local service businesses, and small tech founders. Built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**.
+AgentForge Labs is Shah Faisal's full-stack development and automation agency website. It presents real systems for clinics, real estate teams, gyms, agencies, local service businesses, and small tech founders. Built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**.
 
 ## Features Highlighted
 

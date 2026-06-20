@@ -1,13 +1,9 @@
 const faqs = [
-  ["What do you build?", "I build full-stack websites, MVP interfaces, dashboards, client portals, AI agents, and automation systems for service businesses, agencies, and small tech founders."],
-  ["Are you only an AI automation builder?", "No. I am a full-stack developer and vibe coder as well. Automation is one part of the offer, but I can also build the website, app, dashboard, API-connected tool, or MVP around the automation."],
-  ["What real proof can I show to clients or recruiters?", "The site includes real workflow categories from my n8n workspace, visible dashboard metrics like 98 production executions and 5.45s average runtime, plus high-level client systems based on actual workflow screenshots."],
-  ["Can you build WhatsApp and booking systems?", "Yes. I have built WhatsApp workflows that handle text, audio, and image messages, transcribe voice notes, analyze media, use memory, search knowledge bases, call MCP tools, book appointments, and reply through WhatsApp Cloud API."],
-  ["Can you build MCP-connected agents?", "Yes. I have built MCP server workflows that expose tools like Gmail, Airtable todos, contacts, Google Sheets, email sending, and social content generation so agents can take structured actions."],
-  ["Can you build RAG knowledge bases?", "Yes. I have built Google Drive to Pinecone and Supabase vector pipelines with document loading, text splitting, Gemini embeddings, and retrieval for support bots, solar agents, restaurant booking agents, and personal assistants."],
-  ["What niches do you serve?", "AgentForge Labs is positioned for clinics, real estate teams, gyms, coaches, restaurants, solar installers, agencies, local services, and small tech owners who need websites, lead systems, booking flows, or automations."],
-  ["How fast can a system be delivered?", "Simple websites, landing pages, and automations can often be delivered quickly. Complex multi-agent workflows, SaaS-style dashboards, WhatsApp systems, RAG agents, or CRM pipelines depend on integrations, credentials, test data, and approval flow."],
-  ["Can this help me win Upwork, Fiverr, or remote jobs?", "Yes. The website is written like a real-world agency site so clients can quickly understand the niches, services, proof, and systems you can build."],
+  ["How long does implementation take?", "Simple automations can often launch in a few days. Custom AI agents, RAG systems, WhatsApp flows, and multi-step business systems usually depend on scope, integrations, credentials, and testing needs."],
+  ["Do you work with existing systems?", "Yes. We can integrate with existing CRMs, Google Sheets, Gmail, WhatsApp, databases, websites, internal tools, APIs, and n8n workflows."],
+  ["Can you integrate WhatsApp?", "Yes. We build WhatsApp automations for lead capture, appointment booking, FAQs, follow-ups, reminders, CRM updates, and human handoff."],
+  ["What is a RAG system?", "A RAG system lets an AI assistant answer from approved company data, documents, SOPs, PDFs, and knowledge bases instead of relying on generic responses."],
+  ["Do you provide support after launch?", "Yes. Support, testing, optimization, workflow fixes, and iteration can be included after launch so the system improves with real usage."],
 ];
 
 export default function FAQ() {

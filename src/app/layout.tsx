@@ -9,13 +9,28 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AgentForge Labs | Full-Stack Apps, AI Agents & Automation Systems",
+  metadataBase: new URL("https://agentforge-labs.vercel.app"),
+  title: "AgentForge Labs | AI Agents, RAG Systems & Automation Solutions",
   description:
-    "AgentForge Labs builds full-stack websites, MVPs, AI agents, and automation systems for clinics, real estate teams, gyms, agencies, and small tech founders.",
+    "We build AI agents, RAG systems, WhatsApp automations, MCP integrations and custom workflows for service businesses.",
+  openGraph: {
+    title: "AgentForge Labs | AI Agents, RAG Systems & Automation Solutions",
+    description:
+      "We build AI agents, RAG systems, WhatsApp automations, MCP integrations and custom workflows for service businesses.",
+    type: "website",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AgentForge Labs | AI Agents, RAG Systems & Automation Solutions",
+    description:
+      "AI agents, RAG systems, WhatsApp automations, MCP integrations and custom workflows for service businesses.",
+    images: ["/opengraph-image"],
+  },
   keywords: [
     "automation agency",
     "full stack developer",
-    "vibe coder",
+    "full-stack development",
     "AgentForge Labs",
     "n8n workflows",
     "OpenAI automation",
