@@ -2,6 +2,10 @@
 
 AgentForge Labs is Shah Faisal's full-stack development and automation agency website. It presents real systems for clinics, real estate teams, gyms, agencies, local service businesses, and small tech founders. Built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**.
 
+## 🌐 Live Portfolio
+
+You can access the live portfolio for all my clients at [AgentForge Labs](https://agentforge-labs.vercel.app).
+
 ## Features Highlighted
 
 - **100+ Workflows Built** — Real n8n automation experience across multiple industries
@@ -15,13 +19,8 @@ AgentForge Labs is Shah Faisal's full-stack development and automation agency we
 ```bash
 npm install
 npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Project Structure
-
-```
+Open http://localhost:3000 (http://localhost:3000) in your browser.
+Project Structure
 src/
 ├── app/
 │   ├── globals.css      # Tailwind + custom animations
@@ -33,24 +32,18 @@ src/
     ├── Stats.tsx        # Key metrics bar
     ├── Features.tsx     # Feature cards
     ├── HowItWorks.tsx   # 3-step onboarding
-    ├── Testimonials.tsx # Social proof
+    ├── Testimonials.tsx  # Social proof
     ├── Pricing.tsx      # Pricing tiers
     ├── CTA.tsx          # Bottom call-to-action
     └── Footer.tsx       # Site footer
-```
-
-## Tech Stack
-
-- [Next.js 15](https://nextjs.org/)
-- [React 19](https://react.dev/)
-- [Tailwind CSS 4](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-## Scripts
-
-| Command         | Description              |
-| --------------- | ------------------------ |
-| `npm run dev`   | Start development server |
-| `npm run build` | Production build         |
-| `npm run start` | Start production server  |
-| `npm run lint`  | Run ESLint               |
+Tech Stack
+- Next.js 15 (https://nextjs.org/)
+- React 19 (https://react.dev/)
+- Tailwind CSS 4 (https://tailwindcss.com/)
+- TypeScript (https://www.typescriptlang.org/)
+Scripts
+Command	Description
+npm run dev	Start development server
+npm run build	Production build
+npm run start	Start production server
+npm run lint	Run ESLint
